@@ -1,5 +1,5 @@
 {
     "recruitments": {
-        "list": "https://server-recvo.kyoya0819.com/api/recruitments"
+        "list": "https://recvo.kyoya0819.com/api"
     }
 }
