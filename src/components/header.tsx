@@ -9,12 +9,10 @@ interface Props {
 export default class Header extends Component<Props> {
 
     addHideClass = () => {
-        let menu: HTMLElement | null = document.getElementById('menu');
+        let menuButton: HTMLElement | null = document.getElementById('menuButton');
 
-        if (menu !== null) {
-            menu.classList.remove('show');
-            menu.classList.add('hide');
-        }
+        if (menuButton !== null)
+            menuButton.click();
     };
 
     getNavItem = (text: string, pathName: string) => {
@@ -37,9 +35,10 @@ export default class Header extends Component<Props> {
                         </h1>
                     </Link>
 
-                    <button className="navbar-toggler" type="button" data-toggle="collapse"
-                            data-target="#menu" aria-controls="menu"
-                            aria-expanded="false" aria-label="Toggle navigation">
+                    <button className="navbar-toggler" type="button" id="menuButton"
+                            data-toggle="collapse" data-target="#menu"
+                            aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation"
+                    >
                         <span className="navbar-toggler-icon"> </span>
                     </button>
 
