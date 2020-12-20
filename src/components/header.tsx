@@ -11,7 +11,7 @@ export default class Header extends Component<Props> {
     closeMenu = () => {
         let menuButton: HTMLElement | null = document.getElementById('menuButton');
 
-        if (menuButton !== null)
+        if (menuButton !== null && 992 > document.body.clientWidth)
             menuButton.click();
     };
 
