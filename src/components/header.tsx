@@ -8,12 +8,21 @@ interface Props {
 
 export default class Header extends Component<Props> {
 
+    addHideClass = () => {
+        let menu: HTMLElement | null = document.getElementById('menu');
+
+        if (menu !== null) {
+            menu.classList.remove('show');
+            menu.classList.add('hide');
+        }
+    };
+
     getNavItem = (text: string, pathName: string) => {
         let path:      string = route(pathName);
         let className: string = path === this.props.path ? 'nav-item active' : 'nav-item';
         return (
             <li className={className}>
-                <Link to={path} className={"nav-link"}>{text}</Link>
+                <Link to={path} className={"nav-link"} onClick={() => this.addHideClass()}>{text}</Link>
             </li>
         );
     };
