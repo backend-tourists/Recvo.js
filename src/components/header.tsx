@@ -8,7 +8,7 @@ interface Props {
 
 export default class Header extends Component<Props> {
 
-    addHideClass = () => {
+    closeMenu = () => {
         let menuButton: HTMLElement | null = document.getElementById('menuButton');
 
         if (menuButton !== null)
@@ -20,7 +20,7 @@ export default class Header extends Component<Props> {
         let className: string = path === this.props.path ? 'nav-item active' : 'nav-item';
         return (
             <li className={className}>
-                <Link to={path} className={"nav-link"} onClick={() => this.addHideClass()}>{text}</Link>
+                <Link to={path} className={"nav-link"} onClick={() => this.closeMenu()}>{text}</Link>
             </li>
         );
     };
