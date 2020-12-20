@@ -21,7 +21,6 @@ import './App.scss';
 
 class App extends Component {
     render () {
-        console.log(route('index:3'));
         return (
             <div className="App">
                 <Router>
