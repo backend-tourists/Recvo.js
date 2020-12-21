@@ -2,10 +2,15 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
 import api from '../api.json';
+import './index.scss';
 
 class App extends Component {
     componentDidMount() {
-        axios.get(api.recruitments.list)
+        axios.get(api.recruitments.list, {
+            params: {
+                count: 6
+            }
+        })
             .then( response => {
                 const data = response.data.data;
                 let list: any[];
@@ -31,7 +36,7 @@ class App extends Component {
     render() {
         document.title = "Recvo | 災害復興ボランティアを変える";
         return (
-            <div className="App">
+            <div className="inner">
                 This is Top Page.
                 <div id="recruitments"/>
             </div>

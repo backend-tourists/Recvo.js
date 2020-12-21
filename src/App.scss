@@ -9,3 +9,16 @@
     max-width: 1500px;
     margin: 0 auto;
 }
+
+#header-logo {
+    font-size: 0;
+    line-height: 0;
+
+    &-image {
+        height: 2rem;
+    }
+}
+
+main {
+    margin-top: 4rem;
+}
